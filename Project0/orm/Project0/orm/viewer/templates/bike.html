@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome to Bikeworld!</h1>
+  <ul>
+    {% for bike in bikes %}
+      <li>
+
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+from django.shortcuts import render
+
+from viewer.models import Bike
+
+
+def bike(request):
+  return render(
+    request, template_name='bike.html',
+    context={'bikes': Bike.objects.all()}
+  )
