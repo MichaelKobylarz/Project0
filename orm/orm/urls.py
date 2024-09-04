@@ -17,8 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from viewer.models import Genre, Rower
 from viewer.views import hello
 
+admin.site.register(Genre)
+admin.site.register(Rower)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
