@@ -19,8 +19,7 @@ from django.urls import path
 
 from viewer.views import hello
 
-def hello(request, s):
-    return HttpResponse(f'hello, {s} word!')
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('hello/<s>', hello),
